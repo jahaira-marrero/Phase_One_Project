@@ -1,11 +1,11 @@
 # # THIS SEED FILE NEEDS TO BE ENTIRELY REPLACED -- I'M LEAVING CODE FOR YOUR REFERENCE ONLY!
 
-# Plant.destroy_all
-# Person.destroy_all
-# PlantParenthood.destroy_all
-# Plant.reset_pk_sequence
-# Person.reset_pk_sequence
-# PlantParenthood.reset_pk_sequence
+User.destroy_all
+User.destroy_all
+Dog.destroy_all
+Dog.reset_pk_sequence
+Category.reset_pk_sequence
+Category.reset_pk_sequence
 
 # ########### different ways to write your seeds ############
 
