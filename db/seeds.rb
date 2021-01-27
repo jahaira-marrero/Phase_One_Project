@@ -21,7 +21,7 @@ pam = User.create(name: "Pamela James", username: "pjames", password: "ihatemart
 
 #Category
 sensitive = Category.create(name: "sensitive")
-nonsensitive = Category.create(name: "nonsenstive")
+nonsensitive = Category.create(name: "nonsensitive")
 
 
 
@@ -33,7 +33,7 @@ lisa = Dog.create(user_id: cole.id, category_id: nonsensitive.id, name: "Lisa", 
 simon = Dog.create(user_id: gina.id, category_id: sensitive.id, name: "Simon", age: 7, weight: 31, food_sensitivity: true)
 captain = Dog.create(user_id: pam.id, category_id: nonsensitive.id, name: "Captain", age: 2, weight: 100, food_sensitivity: false)
 
-Category.create = (user_id: martin.id, dog_id: biggie.id)
+# Category.create = (user_id: martin.id, dog_id: biggie.id)
 # # 1: save everything to variables (makes it easy to connect models, best for when you want to be intentional about your seeds)
 # basil = Plant.create(name: "basil the herb", bought: 20200610, color: "green")
 # sylwia = Person.create(name: "Sylwia", free_time: "none", age: 30)
