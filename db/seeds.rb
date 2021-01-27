@@ -1,14 +1,39 @@
 # # THIS SEED FILE NEEDS TO BE ENTIRELY REPLACED -- I'M LEAVING CODE FOR YOUR REFERENCE ONLY!
 
 User.destroy_all
-User.destroy_all
+Category.destroy_all
 Dog.destroy_all
 Dog.reset_pk_sequence
 Category.reset_pk_sequence
-Category.reset_pk_sequence
+User.reset_pk_sequence
+DogFoodCategory.destroy_all
+DogFoodCategory.reset_pk_sequence
+FoodOption.destroy_all
+FoodOption.reset_pk_sequence
 
 # ########### different ways to write your seeds ############
+#Users
+martin = User.create(name: "Martin Payne", username: "mpayne", password: "wazzup")
+tommy = User.create(name: "Tommy Strawn", username: "tstrawn", password: "employed")
+cole = User.create(name: "Cole Brown", username: "cbrown", password: "bigshirley")
+gina = User.create(name: "Gina Waters", username: "gwaters", password: "bosslady")
+pam = User.create(name: "Pamela James", username: "pjames", password: "ihatemartin")
 
+#Category
+sensitive = Category.create(name: "sensitive")
+nonsensitive = Category.create(name: "nonsenstive")
+
+
+
+#Dogs
+biggie = Dog.create(user_id: martin.id, category_id: sensitive.id, name: "Biggie", age: 3, weight: 9, food_sensitivity: true)
+ghost = Dog.create(user_id: tommy.id, category_id: nonsensitive.id, name: "Ghost", age: 1, weight: 40, food_sensitivity: false)
+bart = Dog.create(user_id: cole.id, category_id: nonsensitive.id, name: "Bart", age: 12, weight: 88, food_sensitivity: false)
+lisa = Dog.create(user_id: cole.id, category_id: nonsensitive.id, name: "Lisa", age: 13, weight: 71, food_sensitivity: false)
+simon = Dog.create(user_id: gina.id, category_id: sensitive.id, name: "Simon", age: 7, weight: 31, food_sensitivity: true)
+captain = Dog.create(user_id: pam.id, category_id: nonsensitive.id, name: "Captain", age: 2, weight: 100, food_sensitivity: false)
+
+Category.create = (user_id: martin.id, dog_id: biggie.id)
 # # 1: save everything to variables (makes it easy to connect models, best for when you want to be intentional about your seeds)
 # basil = Plant.create(name: "basil the herb", bought: 20200610, color: "green")
 # sylwia = Person.create(name: "Sylwia", free_time: "none", age: 30)
@@ -69,4 +94,4 @@ Category.reset_pk_sequence
 # Plant.update(category_id: indoor.id)
 
 
-# puts "🔥 🔥 🔥 🔥 "
+puts "🔥 🔥 Woof! Woof! It works! 🔥 🔥 "

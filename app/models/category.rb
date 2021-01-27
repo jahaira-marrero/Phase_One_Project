@@ -4,4 +4,10 @@ class Category < ActiveRecord::Base
   has_many :dog_food_categories
   has_many :users, through: :dogs
   has_many :food_options, through: :dog_food_categories
+
+
+  # def self.sensitive
+  #   Category.map(&:sensitive)
+  # end
+
 end

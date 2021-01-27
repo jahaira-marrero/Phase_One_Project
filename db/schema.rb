@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_005719) do
+ActiveRecord::Schema.define(version: 2021_01_26_154442) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.boolean "sensitive"
   end
 
   create_table "dog_food_categories", force: :cascade do |t|
